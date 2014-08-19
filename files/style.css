@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#select {
+    background: url(../files/ar.png) no-repeat;
+    background-position: 115px 16px;
+    list-style: none;
+    width: 140px;
+    height: 40px;
+    border: 1px solid #CDC9C9;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    overflow: hidden;
+    margin: 20px;
+}
+
+#select li {
+    padding: 10px;
+    padding-left: 30;
+}
+ 
+#select .afterFirst:hover {
+    background: #CDC9C9;
+}
