@@ -16,26 +16,29 @@ addHover(lis);
 
 
 
-select.click(function(e){
+$(document.body).click(function(e){
 
+if(e.target.tagName != "LI") {
+if(!count) return;
+select.animate({'height': '40px'}, {'duration': 500});
+count=false;
+return;
+};
 	if(!count) {
-		$(this).animate({'height': '220px'}, {'duration': 500});
+		select.animate({'height': '220px'}, {'duration': 500});
 		count=true;
 		return;
 	}
-	$(this).animate({'height': '40px'}, {'duration': 500});
+	select.animate({'height': '40px'}, {'duration': 500});
 	count=false;
 
-	if(e.target.tagName != "LI") return;
-	$(this).append(lis).prepend(e.target);
+	select.append(lis).prepend(e.target);
 
 list = select.children('li');
 
 list.removeClass('afterFirst');
 
 addHover(list)
-
-
 
 }); // конец click
   
