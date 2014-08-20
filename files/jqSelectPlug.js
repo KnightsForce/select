@@ -3,7 +3,7 @@
 
 $(document).ready(function(){
 
-var select = $('#select');
+var select = $('.jquery-select-plug');
 var lis = select.children('li');
 var count=false;
 

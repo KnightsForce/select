@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-#select {
+.jquery-select-plug {
     background: url(../files/ar.png) no-repeat;
     background-position: 115px 16px;
     list-style: none;
@@ -17,11 +17,11 @@
     margin: 20px;
 }
 
-#select li {
+.jquery-select-plug li {
     padding: 10px;
     padding-left: 30;
 }
  
-#select .afterFirst:hover {
+.jquery-select-plug .afterFirst:hover {
     background: #CDC9C9;
 }
