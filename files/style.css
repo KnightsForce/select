@@ -8,7 +8,6 @@
     background-position: 115px 16px;
     list-style: none;
     width: 140px;
-    height: 40px;
     border: 1px solid #CDC9C9;
     border-radius: 5px;
     font-weight: bold;
@@ -22,6 +21,6 @@
     padding-left: 30;
 }
  
-.jquery-select-plug .afterFirst:hover {
+.jquery-select-plug .hoverAfterFirst:hover {
     background: #CDC9C9;
 }
