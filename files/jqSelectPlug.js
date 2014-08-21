@@ -1,9 +1,14 @@
 ﻿jQuery.fn.jqSelectPlug=function(){
+
+var jQueryCollection = this;
+
 (function($){ // на случай noConfict
 
 $(document).ready(function(){
 
-var select = $('.jquery-select-plug');
+jQueryCollection.each(function() {
+
+var select = $(this);
 var lis = select.children('li');
 var heightSelect=select.height();
 var firstLiHeight = lis.eq(0).outerHeight(true);
@@ -14,8 +19,7 @@ select.css('height', firstLiHeight+'px');
 
 addHover(lis);
 
-//$(e.target).parent()!=select
-$(document.body).click(function(e){
+$(document).click(function(e){
 
 	if($(e.target).closest(select).length<1) { /* если не li. closest вместо parent 
 												  для возможности дополнительного оборачивания неизвестно зачем.*/
@@ -53,9 +57,11 @@ function addHover(lis) {
 	lis.not(':first').addClass('hoverAfterFirst'); // добавление класса всем кроме первого для hover
 }
 
+}); // конец each
 }); // конец ready
 
 })(jQuery); // конец вызова на месте с псевдонимом
 
+return jQueryCollection;
+
 }; // конец fn
-$('#select').jqSelectPlug();
